@@ -11,12 +11,12 @@ import TodoListComponent from '../components/todo'
 
 const AppRouting = () => {
     const routes = [
-        { path: '/', element: <Dashboard /> },
-        { path: '/posts', element: <PostListComponent /> },
-        { path: '/comments', element: <CommentListComponent /> },
-        { path: '/todos', element: <TodoListComponent /> },
-        { path: '/add', element: <ModalDialogs /> },
-        { path: '/update', element: <ModalDialogs /> },
+        { path: '/Guardian-app/', element: <Dashboard /> },
+        { path: '/Guardian-app/posts', element: <PostListComponent /> },
+        { path: '/Guardian-app/comments', element: <CommentListComponent /> },
+        { path: '/Guardian-app/todos', element: <TodoListComponent /> },
+        { path: '/Guardian-app/add', element: <ModalDialogs /> },
+        { path: '/Guardian-app/update', element: <ModalDialogs /> },
 
     ]
     return (<BrowserRouter>

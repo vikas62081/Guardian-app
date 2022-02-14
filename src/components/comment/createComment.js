@@ -25,7 +25,7 @@ const CreateCommentComponent = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/comments')
+        navigate('/Guardian-app/comments')
         if (state) {
             updateCommentById(dispatch, formData)
         } else {

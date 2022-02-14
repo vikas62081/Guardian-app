@@ -16,9 +16,9 @@ const Header = () => {
         setSidebarOpen(!sidebarOpen)
     }
     const addAction = (() => {
-        if (pathname === "/posts") return "post";
-        else if (pathname === "/comments") return "comment";
-        else if (pathname === "/todos") return "todo"
+        if (pathname === "/Guardian-app/posts") return "post";
+        else if (pathname === "/Guardian-app/comments") return "comment";
+        else if (pathname === "/Guardian-app/todos") return "todo"
     })()
     return (
         <Box sx={{ flexGrow: 1 }} paddingBottom={1}>
@@ -37,7 +37,7 @@ const Header = () => {
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} style={{ fontWeight: "bold" }}>
                         Guardian App
                     </Typography>
-                    {pathname === '/' ? null : <IconButton
+                    {pathname === '/Guardian-app/' ? null : <IconButton
                         size="large"
                         aria-label="account of current user"
                         aria-controls="menu-appbar"
@@ -46,7 +46,7 @@ const Header = () => {
                         title="Add new post"
                         style={{ background: "#eda83c" }}
                         component={Link}
-                        to={`/add?${addAction}`} >
+                        to={`/Guardian-app/add?${addAction}`} >
                         <AddIcon />
                     </IconButton>}
                 </Toolbar>

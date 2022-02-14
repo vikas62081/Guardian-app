@@ -23,7 +23,7 @@ const CreatePostComponent = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/posts')
+        navigate('/Guardian-app/posts')
         if (state) {
             updatePostById(dispatch, formData)
         } else {

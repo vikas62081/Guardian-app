@@ -21,7 +21,7 @@ const CommentListComponent = () => {
         deleteCommentById(dispatch, id)
     }
     const updateComment = (comment) => {
-        navigate('/update?comment', { state: comment })
+        navigate('/Guardian-app/update?comment', { state: comment })
     }
     return (<div>
 
@@ -29,7 +29,7 @@ const CommentListComponent = () => {
         <Typography align='center' variant="h6" style={{ fontWeight: "bold" }} >Comments</Typography>
         <List>
             {commentList && commentList.map(comment => <Item data={comment} title={comment.body}
-                id={comment.id} key={comment.id}
+                id={comment.id} key={comment.id} secondaryText={comment.body}
                 deleteItem={deleteComment} updateItem={updateComment} />)}
         </List>
 

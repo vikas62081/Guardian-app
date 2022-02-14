@@ -20,7 +20,7 @@ const PostListComponent = () => {
     }
 
     const updatePost = (post) => {
-        navigate('/update?post', { state: post })
+        navigate('/Guardian-app/update?post', { state: post })
     }
     const handleChange = (item) => {
         setPostList(posts.filter(post => post.title.toLowerCase().includes(item.toLowerCase())))
@@ -32,6 +32,7 @@ const PostListComponent = () => {
             <Typography align='center' variant="h6" style={{ fontWeight: "bold" }} >Posts</Typography>
             <List>
                 {postList && postList.map(post => <Item data={post} title={post.title} id={post.id}
+                    secondaryText={`${post.body.substring(0, 100)}...`}
                     key={post.id} deleteItem={deletePost} updateItem={updatePost} />)}
             </List>
 

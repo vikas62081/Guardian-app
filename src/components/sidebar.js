@@ -15,10 +15,10 @@ import CommentIcon from '@mui/icons-material/Comment';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import { Link } from 'react-router-dom';
 const Sidebar = ({ open, handleToggle }) => {
-    const options = [{ title: "Dashboard", icon: <DashboardIcon />, to: '/' },
-    { title: "Todo", icon: <ListAltIcon />, to: '/todos' },
-    { title: "Comment", icon: <CommentIcon />, to: '/comments' },
-    { title: "Post", icon: <PostAddIcon />, to: '/posts' },
+    const options = [{ title: "Dashboard", icon: <DashboardIcon />, to: '/Guardian-app/' },
+    { title: "Todo", icon: <ListAltIcon />, to: '/Guardian-app/todos' },
+    { title: "Comment", icon: <CommentIcon />, to: '/Guardian-app/comments' },
+    { title: "Post", icon: <PostAddIcon />, to: '/Guardian-app/posts' },
     ]
     const toggleDrawer = () => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {

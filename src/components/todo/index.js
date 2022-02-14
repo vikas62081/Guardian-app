@@ -21,7 +21,7 @@ const TodoListComponent = () => {
         deleteTodoById(dispatch, id)
     }
     const updateTodo = (todo) => {
-        navigate('/update?todo', { state: todo })
+        navigate('/Guardian-app/update?todo', { state: todo })
     }
     return (<div>
 
@@ -29,7 +29,7 @@ const TodoListComponent = () => {
         <Typography align='center' variant="h6" style={{ fontWeight: "bold" }} >Todos</Typography>
         <List>
             {TodoList && TodoList.map(todo => <Item data={todo} title={todo.title}
-                id={todo.id} key={todo.id}
+                id={todo.id} key={todo.id} secondaryText={new Date(todo.due_on).toDateString()}
                 deleteItem={deleteTodo} updateItem={updateTodo} />)}
         </List>
 

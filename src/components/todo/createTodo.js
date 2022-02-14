@@ -30,7 +30,7 @@ const CreateTodoComponent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData)
-        navigate('/todos')
+        navigate('/Guardian-app/todos')
         if (state) {
             updateTodoById(dispatch, formData)
         } else {
@@ -53,13 +53,13 @@ const CreateTodoComponent = () => {
                 value={formData.due_on}
                 onChange={onChange} required />
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">Status</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={formData.status}
                     name="status"
-                    label="Age"
+                    label="Status"
                     onChange={onChange}
                 >
                     <MenuItem value="pending">Pending</MenuItem>

@@ -9,8 +9,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { Chip } from '@mui/material';
 
-const Item = ({ data, title, id, deleteItem, updateItem }) => {
+const Item = ({ data, title, id, secondaryText = null, deleteItem, updateItem }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [actionVisibility, setActionVisibility] = React.useState(false)
     const open = Boolean(anchorEl);
@@ -50,7 +51,10 @@ const Item = ({ data, title, id, deleteItem, updateItem }) => {
             disablePadding
         >
             <ListItemButton role={undefined} >
-                <ListItemText primary={title} />
+                <ListItemText primary={title} secondary={secondaryText} />
+                {data.status ? <Chip label={data.status === 'pending' ? 'Pending' : "Completed"} variant="outlined" style={{ width: 90 }}
+                    color={data.status === 'pending' ? 'error' : "success"} /> : null}
+
             </ListItemButton>
         </ListItem>
         <Menu
