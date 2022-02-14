@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getAllPosts } from './apis/post';
+import AppRouting from './route';
+import { Grid } from '@mui/material';
+import { getAllComments } from './apis/comment';
+import { getAllTodos } from './apis/todo';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    getAllPosts(dispatch)
+    getAllComments(dispatch)
+    getAllTodos(dispatch)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Grid item sm={12} xs={12} md={8} style={{ margin: "0 auto" }}>
+        <AppRouting />
+      </Grid>
+
+    </div >
   );
 }
 
