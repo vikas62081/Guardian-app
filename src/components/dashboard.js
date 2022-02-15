@@ -17,11 +17,6 @@ const Dashboard = () => {
     const { posts, comments, todos } = useSelector(state => state)
     const dashList = [
         {
-            title: "Posts", color: "#e73973", count: posts && posts.length,
-            description: " In Later on the web, create a new post or Instagram story, or open a scheduled post or story",
-            to: "/Guardian-app/posts", icon: <PostAddIcon fontSize="large" color='secondary' />
-        },
-        {
             title: "Todos", color: "#b2b760", count: todos && todos.length,
             description: " ToDo List App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do",
             to: "/Guardian-app/todos", icon: <ListAltIcon fontSize="large" color='secondary' />
@@ -31,7 +26,11 @@ const Dashboard = () => {
             description: "An Instagram Comment is one of the two ways that people engage with the content they see on Instagram",
             to: "/Guardian-app/comments", icon: <CommentIcon fontSize="large" color='secondary' />
         },
-
+        {
+            title: "Posts", color: "#e73973", count: posts && posts.length,
+            description: " In Later on the web, create a new post or Instagram story, or open a scheduled post or story",
+            to: "/Guardian-app/posts", icon: <PostAddIcon fontSize="large" color='secondary' />
+        },
     ]
     const dashCard = (item) => {
         return <Card style={{ background: item.color }} >
